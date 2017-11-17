@@ -1,0 +1,8 @@
+syntax on
+set nu ai ci si nobk et ar ru nocp hls
+set bs=2 ts=4 sw=4 sts=4
+set cb=unnamed
+set mouse=an
+command PS vsp %:r.in|sp %:r.out|vert res 30|wa
+command RIO wall|!g++ -O2 -std=c++14 -Wall -lm %:r.cpp && ./a.out < %:r.in > %:r.out
+command RI  wall|!g++ -O2 -std=c++14 -Wall -lm %:r.cpp && ./a.out < %:r.in

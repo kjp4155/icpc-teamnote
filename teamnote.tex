@@ -1,0 +1,195 @@
+\documentclass[10pt,landscape,a4paper,twocolumn]{article}
+
+\setlength{\columnsep}{20pt}
+
+\usepackage[left=1.0cm, right=1.0cm, top=1.5cm, bottom=0.6cm, headsep=0.4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{import}
+\usepackage{wrapfig}
+\usepackage{url}
+\usepackage{array}
+\usepackage[normal]{engord}
+\usepackage[svgnames,table]{xcolor}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Seoul National University - Wrong answer on test 87}
+\setmonofont{SourceCodePro-Regular.ttf}
+\setmainhangulfont{NanumMyeongjo}
+\setlength\parindent{0pt}
+\usepackage[parfill]{parskip}
+
+\definecolor{dkgrey}{RGB}{127, 127, 127}
+
+\lstset{basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    breakindent=1.1em,
+%   numbers=left,
+%   numberstyle=\footnotesize\ttfamily\color{dkgrey},
+%   numbersep=5pt
+%   frame=trbl
+}
+
+\lstdefinestyle{mycpp}{
+    language=[GNU]C++,
+    keywordstyle=\color{blue},
+    commentstyle=\itshape\color{purple!40!black},
+    stringstyle=\color{orange},
+}
+
+
+\begin{document}
+\tableofcontents
+
+\section{Setting}
+\subsection{Header}
+\lstinputlisting{src/Setting/Header.cpp}
+
+\subsection{vimrc}
+\lstinputlisting{src/Setting/vimrc}
+
+\subsection{Sublime text}
+\lstinputlisting{src/Setting/mycpp.sublime-build}
+
+\section{String}
+\subsection{KMP}
+\lstinputlisting{src/String/KMP.cpp}
+
+\subsection{Aho Chorasick}
+\lstinputlisting{src/String/AhoChorasick.cpp}
+
+\subsection{Suffix array}
+\lstinputlisting{src/String/SuffixArray.cpp}
+
+\subsection{Manacher's algorithm}
+\lstinputlisting{src/String/Manacher.cpp}
+
+\subsection{Z algorithm}
+\lstinputlisting{src/String/ZAlgorithm.cpp}
+
+
+\section{Graph \& Flow}
+\subsection{Dinic}
+\lstinputlisting{src/Graph/Dinic.cpp}
+
+\subsection{Bipartite matching (simple)}
+\lstinputlisting{src/Graph/BipartiteMatching.cpp}
+
+\subsection{MCMF}
+\lstinputlisting{src/Graph/MCMF.cpp}
+
+\subsection{Articulation Point}
+\lstinputlisting{src/Graph/ArticulationPoint.cpp}
+
+\subsection{Articulation Edge}
+\lstinputlisting{src/Graph/ArticulationEdge.cpp}
+
+\subsection{2SAT \& answer recover}
+\lstinputlisting{src/Graph/2SAT.cpp}
+
+\subsection{Stoer Wagner}
+\lstinputlisting{src/Graph/Stoer_Wagner.cpp}
+
+\subsection{SCC}
+%\lstinputlisting{}
+\section{Query}
+\subsection{HLD}
+\lstinputlisting{src/Query/HLD.cpp}
+
+\subsection{HLD - Jinpyo}
+\lstinputlisting{src/Query/HLD_Jinpyo.cpp}
+
+\subsection{Centroid decomposition}
+\lstinputlisting{src/Query/CentroidDecomposition.cpp}
+
+\subsection{Mo's algorithm}
+\lstinputlisting{src/Query/Mo.cpp}
+
+\subsection{Mo's algorithm on tree}
+\lstinputlisting{src/Query/MoOnTree.cpp}
+
+\subsection{Parallel binary search}
+\lstinputlisting{src/Query/ParallelBinarySearch.cpp}
+
+\subsection{Lazy Propagation 1}
+\lstinputlisting{src/Query/Lazy1.cpp}
+
+\subsection{Fast Segtree}
+\lstinputlisting{src/Query/fast_segtree.cpp}
+
+\section{Geometry}
+\subsection{Closest pair}
+\lstinputlisting{src/Geometry/ClosestPair.cpp}
+
+\subsection{Convex hull}
+\lstinputlisting{src/Geometry/ConvexHull.cpp}
+
+\subsection{Rotating Calipers}
+\lstinputlisting{src/Geometry/RotatingCalipers.cpp}
+
+
+\section{Miscelleneous}
+\subsection{Grundy number}
+\lstinputlisting{src/Miscelleneous/GrundyNumber.cpp}
+
+\subsection{Hungarian}
+\lstinputlisting{src/Miscelleneous/Hungarian.cpp}
+
+\subsection{Convex Hull trick}
+\lstinputlisting{src/Miscelleneous/ConvexHullTrick.cpp}
+
+\subsection{Gaussian Elimination}
+\lstinputlisting{src/Miscelleneous/GaussianElimination.cpp}
+
+\subsection{FFT}
+\lstinputlisting{src/Miscelleneous/fft.cpp}
+
+\subsection{Math}
+\lstinputlisting{src/Miscelleneous/math.txt}
+
+\subsection{Extended Euclidean}
+\lstinputlisting{src/Miscelleneous/ExtendedEuclidean.cpp}
+
+\subsection{Persistence Segment Tree}
+\lstinputlisting{src/Miscelleneous/PersistenceSegTree.cpp}
+
+\subsection{XOR FFT}
+\lstinputlisting{src/Miscelleneous/XOR_FFT.cpp}
+
+\subsection{NTT}
+\lstinputlisting{src/Miscelleneous/NTT.cpp}
+
+\subsection{2D FFT}
+\lstinputlisting{src/Miscelleneous/2D_FFT.cpp}
+
+\subsection{Divide and Conquer DP optimization}
+\lstinputlisting{src/Miscelleneous/DivideandConquerOptimization.cpp}
+
+\subsection{BITSET}
+\lstinputlisting{src/Miscelleneous/BITSET.txt}
+
+\subsection{LR-flow}
+\lstinputlisting{src/Miscelleneous/LRflow.txt}
+
+
+\clearpage
+\null
+\clearpage
+\null
+\clearpage
+\null
+\clearpage
+\null
+\clearpage
+\null
+\end{document}
+
