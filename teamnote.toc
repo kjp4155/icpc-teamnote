@@ -1,47 +1,7 @@
-\contentsline {section}{\numberline {1}Setting}{1}
-\contentsline {subsection}{\numberline {1.1}Header}{1}
-\contentsline {subsection}{\numberline {1.2}vimrc}{1}
-\contentsline {subsection}{\numberline {1.3}Sublime text}{1}
-\contentsline {section}{\numberline {2}String}{2}
-\contentsline {subsection}{\numberline {2.1}KMP}{2}
-\contentsline {subsection}{\numberline {2.2}Aho Chorasick}{2}
-\contentsline {subsection}{\numberline {2.3}Suffix array}{3}
-\contentsline {subsection}{\numberline {2.4}Manacher's algorithm}{3}
-\contentsline {subsection}{\numberline {2.5}Z algorithm}{4}
-\contentsline {section}{\numberline {3}Graph \& Flow}{4}
-\contentsline {subsection}{\numberline {3.1}Dinic}{4}
-\contentsline {subsection}{\numberline {3.2}Bipartite matching (simple)}{5}
-\contentsline {subsection}{\numberline {3.3}MCMF}{5}
-\contentsline {subsection}{\numberline {3.4}Articulation Point}{6}
-\contentsline {subsection}{\numberline {3.5}Articulation Edge}{6}
-\contentsline {subsection}{\numberline {3.6}2SAT \& answer recover}{7}
-\contentsline {subsection}{\numberline {3.7}Stoer Wagner}{7}
-\contentsline {subsection}{\numberline {3.8}SCC}{8}
-\contentsline {section}{\numberline {4}Query}{8}
-\contentsline {subsection}{\numberline {4.1}HLD}{8}
-\contentsline {subsection}{\numberline {4.2}HLD - Jinpyo}{9}
-\contentsline {subsection}{\numberline {4.3}Centroid decomposition}{10}
-\contentsline {subsection}{\numberline {4.4}Mo's algorithm}{11}
-\contentsline {subsection}{\numberline {4.5}Mo's algorithm on tree}{11}
-\contentsline {subsection}{\numberline {4.6}Parallel binary search}{13}
-\contentsline {subsection}{\numberline {4.7}Lazy Propagation 1}{14}
-\contentsline {subsection}{\numberline {4.8}Fast Segtree}{14}
-\contentsline {section}{\numberline {5}Geometry}{15}
-\contentsline {subsection}{\numberline {5.1}Closest pair}{15}
-\contentsline {subsection}{\numberline {5.2}Convex hull}{15}
-\contentsline {subsection}{\numberline {5.3}Rotating Calipers}{16}
-\contentsline {section}{\numberline {6}Miscelleneous}{16}
-\contentsline {subsection}{\numberline {6.1}Grundy number}{16}
-\contentsline {subsection}{\numberline {6.2}Hungarian}{17}
-\contentsline {subsection}{\numberline {6.3}Convex Hull trick}{18}
-\contentsline {subsection}{\numberline {6.4}Gaussian Elimination}{18}
-\contentsline {subsection}{\numberline {6.5}FFT}{19}
-\contentsline {subsection}{\numberline {6.6}Math}{19}
-\contentsline {subsection}{\numberline {6.7}Extended Euclidean}{19}
-\contentsline {subsection}{\numberline {6.8}Persistence Segment Tree}{20}
-\contentsline {subsection}{\numberline {6.9}XOR FFT}{20}
-\contentsline {subsection}{\numberline {6.10}NTT}{21}
-\contentsline {subsection}{\numberline {6.11}2D FFT}{21}
-\contentsline {subsection}{\numberline {6.12}Divide and Conquer DP optimization}{22}
-\contentsline {subsection}{\numberline {6.13}BITSET}{23}
-\contentsline {subsection}{\numberline {6.14}LR-flow}{23}
+\contentsline {section}{\numberline {1}Data Structure}{1}
+\contentsline {subsection}{\numberline {1.1}SegTree Class}{1}
+\contentsline {subsection}{\numberline {1.2}BIT}{1}
+\contentsline {section}{\numberline {2}String}{1}
+\contentsline {subsection}{\numberline {2.1}KMP}{1}
+\contentsline {section}{\numberline {3}Graph}{2}
+\contentsline {subsection}{\numberline {3.1}Bipartite Matching}{2}
