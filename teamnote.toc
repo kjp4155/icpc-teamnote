@@ -10,6 +10,7 @@
 \contentsline {subsection}{\numberline {4.1}DFS(Tree Diameter)}{3}
 \contentsline {subsection}{\numberline {4.2}Bipartite Matching}{3}
 \contentsline {subsection}{\numberline {4.3}Dinic}{3}
-\contentsline {subsection}{\numberline {4.4}LCA}{4}
-\contentsline {section}{\numberline {5}Miscellaneous}{5}
-\contentsline {subsection}{\numberline {5.1}Permutations / Combinations}{5}
+\contentsline {subsection}{\numberline {4.4}MCMF}{4}
+\contentsline {subsection}{\numberline {4.5}LCA}{5}
+\contentsline {section}{\numberline {5}Miscellaneous}{6}
+\contentsline {subsection}{\numberline {5.1}Permutations / Combinations}{6}
