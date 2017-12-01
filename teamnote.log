@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  1 DEC 2017 21:36
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  2 DEC 2017 03:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -927,7 +927,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 (./src/Python/ClosestPair.py) (./src/Python/BinarySearch.py)
-Underfull \vbox (badness 5607) has occurred while \output is active []
+Underfull \vbox (badness 2096) has occurred while \output is active []
 
  [1
 
@@ -942,12 +942,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Python/LCA.py [5]) (./src/Python/itertools.py) [6
-
-] (./teamnote.aux) ) 
+(./src/Python/LCA.py [5]) (./src/Python/Dijkstra.py) (./src/Python/itertools.py
+) [6] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16404 strings out of 493005
- 299392 string characters out of 6134596
+ 16407 strings out of 493005
+ 299446 string characters out of 6134596
  589256 words of memory out of 5000000
  20180 multiletter control sequences out of 15000+600000
  5523 words of font info for 45 fonts, out of 8000000 for 9000

@@ -12,5 +12,6 @@
 \contentsline {subsection}{\numberline {4.3}Dinic}{3}
 \contentsline {subsection}{\numberline {4.4}MCMF}{4}
 \contentsline {subsection}{\numberline {4.5}LCA}{5}
+\contentsline {subsection}{\numberline {4.6}Dijkstra}{6}
 \contentsline {section}{\numberline {5}Miscellaneous}{6}
 \contentsline {subsection}{\numberline {5.1}Permutations / Combinations}{6}
