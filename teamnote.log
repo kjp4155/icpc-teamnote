@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  2 DEC 2017 03:48
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  2 DEC 2017 04:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -926,12 +926,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `teamnote.toc'.
 
 
-(./src/Python/ClosestPair.py) (./src/Python/BinarySearch.py)
-Underfull \vbox (badness 2096) has occurred while \output is active []
+(./src/Python/ClosestPair.py) (./src/Python/ConvexHull.py [1
 
- [1
-
-]
+])
 (./src/Python/SegTree.py) (./src/Python/BIT.py) (./src/Python/KMP.py [2])
 (./src/Python/TreeDiameter.py) (./src/Python/BipartiteMatching.py)
 (./src/Python/Dinic.py [3]
@@ -943,14 +940,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (./src/Python/LCA.py [5]) (./src/Python/Dijkstra.py) (./src/Python/itertools.py
-) [6] (./teamnote.aux) ) 
+) (./src/Python/BinarySearch.py [6]) (./src/Python/CoordinateCompression.py)
+(./src/Python/Dict.txt) [7
+
+] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16407 strings out of 493005
- 299446 string characters out of 6134596
- 589256 words of memory out of 5000000
+ 16416 strings out of 493005
+ 299643 string characters out of 6134596
+ 593256 words of memory out of 5000000
  20180 multiletter control sequences out of 15000+600000
  5523 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  41i,12n,77p,10366b,2384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on teamnote.pdf (6 pages).
+Output written on teamnote.pdf (7 pages).
