@@ -1,7 +1,15 @@
-\contentsline {section}{\numberline {1}Data Structure}{1}
-\contentsline {subsection}{\numberline {1.1}SegTree Class}{1}
-\contentsline {subsection}{\numberline {1.2}BIT}{1}
-\contentsline {section}{\numberline {2}String}{1}
-\contentsline {subsection}{\numberline {2.1}KMP}{1}
-\contentsline {section}{\numberline {3}Graph}{2}
-\contentsline {subsection}{\numberline {3.1}Bipartite Matching}{2}
+\contentsline {section}{\numberline {1}Geometry}{1}
+\contentsline {subsection}{\numberline {1.1}Closest Pair}{1}
+\contentsline {subsection}{\numberline {1.2}Binary Search}{1}
+\contentsline {section}{\numberline {2}Data Structure}{2}
+\contentsline {subsection}{\numberline {2.1}SegTree Class}{2}
+\contentsline {subsection}{\numberline {2.2}BIT}{2}
+\contentsline {section}{\numberline {3}String}{2}
+\contentsline {subsection}{\numberline {3.1}KMP}{2}
+\contentsline {section}{\numberline {4}Graph}{3}
+\contentsline {subsection}{\numberline {4.1}DFS(Tree Diameter)}{3}
+\contentsline {subsection}{\numberline {4.2}Bipartite Matching}{3}
+\contentsline {subsection}{\numberline {4.3}Dinic}{3}
+\contentsline {subsection}{\numberline {4.4}LCA}{4}
+\contentsline {section}{\numberline {5}Miscellaneous}{5}
+\contentsline {subsection}{\numberline {5.1}Permutations / Combinations}{5}
