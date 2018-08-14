@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  9 NOV 2017 15:25
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  14 AUG 2018 15:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -927,9 +927,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 (./src/Setting/Header.cpp) (./src/Setting/vimrc)
-(./src/Setting/mycpp.sublime-build [1
+(./src/Setting/mycpp.sublime-build) [1
 
-]) (./src/String/KMP.cpp)
+] (./src/String/KMP.cpp)
 (./src/String/AhoChorasick.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -939,16 +939,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4])
-(./src/Graph/BipartiteMatching.cpp) (./src/Graph/MCMF.cpp
+(./src/Graph/BipartiteMatching.cpp) (./src/Graph/MCMF.cpp)
+Underfull \vbox (badness 2573) has occurred while \output is active []
+
+ [5]
+(./src/Graph/ArticulationPoint.cpp) (./src/Graph/ArticulationEdge.cpp)
+(./src/Graph/2SAT.cpp [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5])
-(./src/Graph/ArticulationPoint.cpp) (./src/Graph/ArticulationEdge.cpp) [6]
-(./src/Graph/2SAT.cpp) (./src/Graph/Stoer_Wagner.cpp [7])
+)
+(./src/Graph/Stoer_Wagner.cpp [7]) (./src/Query/HLD.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-(./src/Query/HLD.cpp [8]
+ [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
@@ -968,33 +971,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13])
-(./src/Query/Lazy1.cpp) (./src/Query/fast_segtree.cpp [14])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./src/Geometry/ClosestPair.cpp) (./src/Geometry/ConvexHull.cpp [15])
-(./src/Geometry/RotatingCalipers.cpp) (./src/Miscelleneous/GrundyNumber.cpp
-[16]) (./src/Miscelleneous/Hungarian.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17])
-(./src/Miscelleneous/ConvexHullTrick.cpp)
-(./src/Miscelleneous/GaussianElimination.cpp [18]) (./src/Miscelleneous/fft.cpp
-) (./src/Miscelleneous/math.txt) (./src/Miscelleneous/ExtendedEuclidean.cpp)
-[19] (./src/Miscelleneous/PersistenceSegTree.cpp)
-(./src/Miscelleneous/XOR_FFT.cpp [20]) (./src/Miscelleneous/NTT.cpp)
-(./src/Miscelleneous/2D_FFT.cpp [21]
+(./src/Query/Lazy1.cpp) (./src/Geometry/ClosestPair.cpp [14])
+(./src/Geometry/ConvexHull.cpp) (./src/Geometry/RotatingCalipers.cpp [15])
+(./src/Miscelleneous/GrundyNumber.cpp) (./src/Miscelleneous/Hungarian.cpp
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/DivideandConquerOptimization.cpp [22])
-(./src/Miscelleneous/BITSET.txt) (./src/Miscelleneous/LRflow.txt) [23
+(./src/Miscelleneous/ConvexHullTrick.cpp [17])
+(./src/Miscelleneous/GaussianElimination.cpp) (./src/Miscelleneous/fft.cpp
+[18]) (./src/Miscelleneous/ExtendedEuclidean.cpp)
+(./src/Miscelleneous/PersistenceSegTree.cpp) (./src/Miscelleneous/XOR_FFT.cpp
+[19]) (./src/Miscelleneous/NTT.cpp) (./src/Miscelleneous/2D_FFT.cpp [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21])
+(./src/Miscelleneous/DivideandConquerOptimization.cpp)
+(./src/Miscelleneous/LRflow.txt) [22
+
+] [23
+
 
 ] [24
 
 
-]
-[25
+] [25
 
 
 ] [26
@@ -1003,17 +1007,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [27
 
 
-] [28
-
-
 ] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16498 strings out of 493005
- 301627 string characters out of 6134596
- 667256 words of memory out of 5000000
- 20181 multiletter control sequences out of 15000+600000
- 5531 words of font info for 46 fonts, out of 8000000 for 9000
+ 16488 strings out of 493005
+ 301388 string characters out of 6134596
+ 662256 words of memory out of 5000000
+ 20180 multiletter control sequences out of 15000+600000
+ 5523 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  41i,12n,77p,10366b,2384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on teamnote.pdf (28 pages).
+Output written on teamnote.pdf (27 pages).

@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {3.3}MCMF}{5}
 \contentsline {subsection}{\numberline {3.4}Articulation Point}{6}
 \contentsline {subsection}{\numberline {3.5}Articulation Edge}{6}
-\contentsline {subsection}{\numberline {3.6}2SAT \& answer recover}{7}
+\contentsline {subsection}{\numberline {3.6}2SAT \& answer recover}{6}
 \contentsline {subsection}{\numberline {3.7}Stoer Wagner}{7}
 \contentsline {subsection}{\numberline {3.8}SCC}{8}
 \contentsline {section}{\numberline {4}Query}{8}
@@ -25,23 +25,20 @@
 \contentsline {subsection}{\numberline {4.5}Mo's algorithm on tree}{11}
 \contentsline {subsection}{\numberline {4.6}Parallel binary search}{13}
 \contentsline {subsection}{\numberline {4.7}Lazy Propagation 1}{14}
-\contentsline {subsection}{\numberline {4.8}Fast Segtree}{14}
-\contentsline {section}{\numberline {5}Geometry}{15}
-\contentsline {subsection}{\numberline {5.1}Closest pair}{15}
+\contentsline {section}{\numberline {5}Geometry}{14}
+\contentsline {subsection}{\numberline {5.1}Closest pair}{14}
 \contentsline {subsection}{\numberline {5.2}Convex hull}{15}
-\contentsline {subsection}{\numberline {5.3}Rotating Calipers}{16}
+\contentsline {subsection}{\numberline {5.3}Rotating Calipers}{15}
 \contentsline {section}{\numberline {6}Miscelleneous}{16}
 \contentsline {subsection}{\numberline {6.1}Grundy number}{16}
-\contentsline {subsection}{\numberline {6.2}Hungarian}{17}
-\contentsline {subsection}{\numberline {6.3}Convex Hull trick}{18}
+\contentsline {subsection}{\numberline {6.2}Hungarian}{16}
+\contentsline {subsection}{\numberline {6.3}Convex Hull trick}{17}
 \contentsline {subsection}{\numberline {6.4}Gaussian Elimination}{18}
-\contentsline {subsection}{\numberline {6.5}FFT}{19}
-\contentsline {subsection}{\numberline {6.6}Math}{19}
-\contentsline {subsection}{\numberline {6.7}Extended Euclidean}{19}
-\contentsline {subsection}{\numberline {6.8}Persistence Segment Tree}{20}
-\contentsline {subsection}{\numberline {6.9}XOR FFT}{20}
-\contentsline {subsection}{\numberline {6.10}NTT}{21}
-\contentsline {subsection}{\numberline {6.11}2D FFT}{21}
-\contentsline {subsection}{\numberline {6.12}Divide and Conquer DP optimization}{22}
-\contentsline {subsection}{\numberline {6.13}BITSET}{23}
-\contentsline {subsection}{\numberline {6.14}LR-flow}{23}
+\contentsline {subsection}{\numberline {6.5}FFT}{18}
+\contentsline {subsection}{\numberline {6.6}Extended Euclidean}{19}
+\contentsline {subsection}{\numberline {6.7}Persistence Segment Tree}{19}
+\contentsline {subsection}{\numberline {6.8}XOR FFT}{19}
+\contentsline {subsection}{\numberline {6.9}NTT}{20}
+\contentsline {subsection}{\numberline {6.10}2D FFT}{20}
+\contentsline {subsection}{\numberline {6.11}Divide and Conquer DP optimization}{22}
+\contentsline {subsection}{\numberline {6.12}LR-flow}{22}
