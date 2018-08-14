@@ -32,13 +32,14 @@
 \contentsline {section}{\numberline {6}Miscelleneous}{16}
 \contentsline {subsection}{\numberline {6.1}Grundy number}{16}
 \contentsline {subsection}{\numberline {6.2}Hungarian}{16}
-\contentsline {subsection}{\numberline {6.3}Convex Hull trick}{17}
-\contentsline {subsection}{\numberline {6.4}Gaussian Elimination}{18}
-\contentsline {subsection}{\numberline {6.5}FFT}{18}
-\contentsline {subsection}{\numberline {6.6}Extended Euclidean}{19}
-\contentsline {subsection}{\numberline {6.7}Persistence Segment Tree}{19}
-\contentsline {subsection}{\numberline {6.8}XOR FFT}{19}
-\contentsline {subsection}{\numberline {6.9}NTT}{20}
-\contentsline {subsection}{\numberline {6.10}2D FFT}{20}
-\contentsline {subsection}{\numberline {6.11}Divide and Conquer DP optimization}{22}
-\contentsline {subsection}{\numberline {6.12}LR-flow}{22}
+\contentsline {subsection}{\numberline {6.3}Hungarian2}{17}
+\contentsline {subsection}{\numberline {6.4}Convex Hull trick}{19}
+\contentsline {subsection}{\numberline {6.5}Gaussian Elimination}{19}
+\contentsline {subsection}{\numberline {6.6}FFT}{20}
+\contentsline {subsection}{\numberline {6.7}Extended Euclidean}{20}
+\contentsline {subsection}{\numberline {6.8}Persistence Segment Tree}{21}
+\contentsline {subsection}{\numberline {6.9}XOR FFT}{21}
+\contentsline {subsection}{\numberline {6.10}NTT}{22}
+\contentsline {subsection}{\numberline {6.11}2D FFT}{22}
+\contentsline {subsection}{\numberline {6.12}Divide and Conquer DP optimization}{23}
+\contentsline {subsection}{\numberline {6.13}LR-flow}{24}
