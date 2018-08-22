@@ -21,26 +21,27 @@
 \contentsline {subsection}{\numberline {4.2}Centroid decomposition}{9}
 \contentsline {subsection}{\numberline {4.3}Mo's algorithm}{9}
 \contentsline {subsection}{\numberline {4.4}Mo's algorithm on tree}{10}
-\contentsline {subsection}{\numberline {4.5}Parallel binary search}{11}
-\contentsline {subsection}{\numberline {4.6}Lazy Propagation 1}{12}
+\contentsline {subsection}{\numberline {4.5}Mo Hilbert Order}{11}
+\contentsline {subsection}{\numberline {4.6}Parallel binary search}{12}
+\contentsline {subsection}{\numberline {4.7}Lazy Propagation 1}{13}
 \contentsline {section}{\numberline {5}Geometry}{13}
 \contentsline {subsection}{\numberline {5.1}Closest pair}{13}
-\contentsline {subsection}{\numberline {5.2}Convex hull}{13}
+\contentsline {subsection}{\numberline {5.2}Convex hull}{14}
 \contentsline {subsection}{\numberline {5.3}Rotating Calipers}{14}
-\contentsline {section}{\numberline {6}Math}{14}
-\contentsline {subsection}{\numberline {6.1}FFT}{14}
+\contentsline {section}{\numberline {6}Math}{15}
+\contentsline {subsection}{\numberline {6.1}FFT}{15}
 \contentsline {subsection}{\numberline {6.2}Extended Euclidean}{15}
 \contentsline {subsection}{\numberline {6.3}Gaussian Elimination}{15}
-\contentsline {subsection}{\numberline {6.4}Prime Algorithms}{15}
+\contentsline {subsection}{\numberline {6.4}Prime Algorithms}{16}
 \contentsline {section}{\numberline {7}Miscelleneous}{16}
 \contentsline {subsection}{\numberline {7.1}Grundy number}{16}
 \contentsline {subsection}{\numberline {7.2}Hungarian}{17}
 \contentsline {subsection}{\numberline {7.3}Hungarian2}{18}
-\contentsline {subsection}{\numberline {7.4}LiChao Tree}{19}
-\contentsline {subsection}{\numberline {7.5}Persistence Segment Tree}{20}
+\contentsline {subsection}{\numberline {7.4}LiChao Tree}{20}
+\contentsline {subsection}{\numberline {7.5}Persistence Segment Tree}{21}
 \contentsline {subsection}{\numberline {7.6}XOR FFT}{21}
-\contentsline {subsection}{\numberline {7.7}NTT}{21}
+\contentsline {subsection}{\numberline {7.7}NTT}{22}
 \contentsline {subsection}{\numberline {7.8}2D FFT}{22}
 \contentsline {subsection}{\numberline {7.9}Divide and Conquer DP optimization}{23}
-\contentsline {subsection}{\numberline {7.10}Order Statistic Tree}{23}
+\contentsline {subsection}{\numberline {7.10}Order Statistic Tree}{24}
 \contentsline {subsection}{\numberline {7.11}BITSET}{24}

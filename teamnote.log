@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  22 AUG 2018 17:04
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  22 AUG 2018 17:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -960,44 +960,43 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Query/ParallelBinarySearch.cpp [11]
+(./src/Query/MoHilbertOrder.cpp [11]) (./src/Query/ParallelBinarySearch.cpp
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12])
+(./src/Query/Lazy1.cpp) (./src/Geometry/ClosestPair.cpp [13])
+(./src/Geometry/ConvexHull.cpp) (./src/Geometry/RotatingCalipers.cpp)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+(./src/Math/fft.cpp) (./src/Math/ExtendedEuclidean.cpp)
+(./src/Math/GaussianElimination.cpp [15]) (./src/Math/PrimeAlgorithms.cpp)
+(./src/Miscelleneous/GrundyNumber.cpp [16])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./src/Miscelleneous/Hungarian.cpp [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Query/Lazy1.cpp [12]) (./src/Geometry/ClosestPair.cpp)
-(./src/Geometry/ConvexHull.cpp [13]) (./src/Geometry/RotatingCalipers.cpp)
-(./src/Math/fft.cpp [14]) (./src/Math/ExtendedEuclidean.cpp)
-(./src/Math/GaussianElimination.cpp) (./src/Math/PrimeAlgorithms.cpp [15]
+(./src/Miscelleneous/Hungarian2.cpp [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19])
+(./src/Miscelleneous/LiChaoTree.cpp
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20])
+(./src/Miscelleneous/PersistenceSegTree.cpp) (./src/Miscelleneous/XOR_FFT.cpp
+[21]) (./src/Miscelleneous/NTT.cpp) (./src/Miscelleneous/2D_FFT.cpp [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/GrundyNumber.cpp [16]) (./src/Miscelleneous/Hungarian.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17])
-(./src/Miscelleneous/Hungarian2.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-(./src/Miscelleneous/LiChaoTree.cpp [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-(./src/Miscelleneous/PersistenceSegTree.cpp [20])
-(./src/Miscelleneous/XOR_FFT.cpp) (./src/Miscelleneous/NTT.cpp [21])
-(./src/Miscelleneous/2D_FFT.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-(./src/Miscelleneous/DivideandConquerOptimization.cpp)
-(./src/Miscelleneous/OrderStatisticTree.cpp [23])
-(./src/Miscelleneous/BITSET.cpp
+(./src/Miscelleneous/DivideandConquerOptimization.cpp [23])
+(./src/Miscelleneous/OrderStatisticTree.cpp) (./src/Miscelleneous/BITSET.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24])
@@ -1020,9 +1019,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16495 strings out of 493005
- 301466 string characters out of 6134596
- 659256 words of memory out of 5000000
+ 16498 strings out of 493005
+ 301538 string characters out of 6134596
+ 670256 words of memory out of 5000000
  20180 multiletter control sequences out of 15000+600000
  5523 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
