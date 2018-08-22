@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  22 AUG 2018 16:37
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  22 AUG 2018 17:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -932,70 +932,73 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (./src/Setting/vimrc) (./src/Setting/mycpp.sublime-build) (./src/String/KMP.cpp
 ) [2] (./src/String/AhoChorasick.cpp) (./src/String/SuffixArray.cpp [3])
 (./src/String/Manacher.cpp) (./src/String/ZAlgorithm.cpp) [4]
-(./src/Graph/Dinic.cpp) (./src/Graph/BipartiteMatching.cpp)
-(./src/Graph/MCMF.cpp [5]
+(./src/Graph/BCC.cpp) (./src/Graph/Dinic.cpp [5])
+(./src/Graph/BipartiteMatching.cpp) (./src/Graph/MCMF.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(./src/Graph/2SAT.cpp [6]
+ [6])
+(./src/Graph/2SAT.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(./src/Graph/Stoer_Wagner.cpp [7]) (./src/Graph/LRflow.txt)
-(./src/Query/HLD_Jinpyo.cpp
+ [7])
+(./src/Graph/Stoer_Wagner.cpp) (./src/Graph/LRflow.txt)
+(./src/Query/HLD_Jinpyo.cpp [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(./src/Query/CentroidDecomposition.cpp [9]) (./src/Query/Mo.cpp)
-(./src/Query/MoOnTree.cpp [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
+ [9])
+(./src/Query/CentroidDecomposition.cpp) (./src/Query/Mo.cpp [10])
+(./src/Query/MoOnTree.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-(./src/Query/ParallelBinarySearch.cpp) (./src/Query/Lazy1.cpp [12])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./src/Geometry/ClosestPair.cpp) (./src/Geometry/ConvexHull.cpp [13])
-(./src/Geometry/RotatingCalipers.cpp) (./src/Math/fft.cpp [14])
-(./src/Math/ExtendedEuclidean.cpp) (./src/Math/GaussianElimination.cpp)
-(./src/Math/PrimeAlgorithms.cpp [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/GrundyNumber.cpp [16]) (./src/Miscelleneous/Hungarian.cpp
+(./src/Query/ParallelBinarySearch.cpp [12]) (./src/Query/Lazy1.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
-(./src/Miscelleneous/Hungarian2.cpp
+ [13])
+(./src/Geometry/ClosestPair.cpp) (./src/Geometry/ConvexHull.cpp [14])
+(./src/Geometry/RotatingCalipers.cpp) (./src/Math/fft.cpp)
+(./src/Math/ExtendedEuclidean.cpp) (./src/Math/GaussianElimination.cpp [15])
+(./src/Math/PrimeAlgorithms.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+ [16])
+(./src/Miscelleneous/GrundyNumber.cpp) (./src/Miscelleneous/Hungarian.cpp
+[17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/ConvexHullTrick.cpp [19])
+(./src/Miscelleneous/Hungarian2.cpp [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19])
+(./src/Miscelleneous/LiChaoTree.cpp
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20])
 (./src/Miscelleneous/PersistenceSegTree.cpp) (./src/Miscelleneous/XOR_FFT.cpp
-[20]) (./src/Miscelleneous/NTT.cpp) (./src/Miscelleneous/2D_FFT.cpp [21]
+[21]) (./src/Miscelleneous/NTT.cpp) (./src/Miscelleneous/2D_FFT.cpp [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22])
+ [23])
 (./src/Miscelleneous/DivideandConquerOptimization.cpp)
-(./src/Miscelleneous/OrderStatisticTree.cpp) [23] [24
+(./src/Miscelleneous/OrderStatisticTree.cpp) (./src/Miscelleneous/BITSET.cpp
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-] [25
-
-
-] [26
+) [25]
+[26
 
 
 ] [27
@@ -1004,15 +1007,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [28
 
 
-]
-(./teamnote.aux) ) 
+] [29
+
+
+] [30
+
+
+] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16492 strings out of 493005
- 301445 string characters out of 6134596
- 924256 words of memory out of 5000000
+ 16498 strings out of 493005
+ 301533 string characters out of 6134596
+ 920256 words of memory out of 5000000
  20180 multiletter control sequences out of 15000+600000
  5523 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  41i,12n,77p,10366b,2384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on teamnote.pdf (28 pages).
+Output written on teamnote.pdf (30 pages).
