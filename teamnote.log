@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  22 AUG 2018 17:01
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  22 AUG 2018 17:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -926,79 +926,84 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `teamnote.toc'.
 
 
-(./src/Setting/Header.cpp) (./src/Setting/HeaderDebug.cpp [1
+(./src/Setting/Header.cpp) (./src/Setting/vimrc)
+(./src/Setting/mycpp.sublime-build [1
 
-])
-(./src/Setting/vimrc) (./src/Setting/mycpp.sublime-build) (./src/String/KMP.cpp
-) [2] (./src/String/AhoChorasick.cpp) (./src/String/SuffixArray.cpp [3])
-(./src/String/Manacher.cpp) (./src/String/ZAlgorithm.cpp) [4]
-(./src/Graph/BCC.cpp) (./src/Graph/Dinic.cpp [5])
-(./src/Graph/BipartiteMatching.cpp) (./src/Graph/MCMF.cpp
+]) (./src/String/KMP.cpp)
+(./src/String/AhoChorasick.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6])
-(./src/Graph/2SAT.cpp
+ [2])
+(./src/String/SuffixArray.cpp) (./src/String/Manacher.cpp [3])
+(./src/String/ZAlgorithm.cpp) (./src/Graph/BCC.cpp) (./src/Graph/Dinic.cpp
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(./src/Graph/BipartiteMatching.cpp) (./src/Graph/MCMF.cpp [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(./src/Graph/2SAT.cpp [6]) (./src/Graph/Stoer_Wagner.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7])
-(./src/Graph/Stoer_Wagner.cpp) (./src/Graph/LRflow.txt)
-(./src/Query/HLD_Jinpyo.cpp [8]
+(./src/Graph/LRflow.txt) (./src/Query/HLD_Jinpyo.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9])
-(./src/Query/CentroidDecomposition.cpp) (./src/Query/Mo.cpp [10])
+ [8])
+(./src/Query/CentroidDecomposition.cpp) (./src/Query/Mo.cpp [9])
 (./src/Query/MoOnTree.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Query/ParallelBinarySearch.cpp [12]) (./src/Query/Lazy1.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13])
-(./src/Geometry/ClosestPair.cpp) (./src/Geometry/ConvexHull.cpp [14])
-(./src/Geometry/RotatingCalipers.cpp) (./src/Math/fft.cpp)
-(./src/Math/ExtendedEuclidean.cpp) (./src/Math/GaussianElimination.cpp [15])
-(./src/Math/PrimeAlgorithms.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16])
-(./src/Miscelleneous/GrundyNumber.cpp) (./src/Miscelleneous/Hungarian.cpp
-[17]
+(./src/Query/ParallelBinarySearch.cpp [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/Hungarian2.cpp [18]
+(./src/Query/Lazy1.cpp [12]) (./src/Geometry/ClosestPair.cpp)
+(./src/Geometry/ConvexHull.cpp [13]) (./src/Geometry/RotatingCalipers.cpp)
+(./src/Math/fft.cpp [14]) (./src/Math/ExtendedEuclidean.cpp)
+(./src/Math/GaussianElimination.cpp) (./src/Math/PrimeAlgorithms.cpp [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+)
+(./src/Miscelleneous/GrundyNumber.cpp [16]) (./src/Miscelleneous/Hungarian.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19])
-(./src/Miscelleneous/LiChaoTree.cpp
+ [17])
+(./src/Miscelleneous/Hungarian2.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20])
-(./src/Miscelleneous/PersistenceSegTree.cpp) (./src/Miscelleneous/XOR_FFT.cpp
-[21]) (./src/Miscelleneous/NTT.cpp) (./src/Miscelleneous/2D_FFT.cpp [22]
+ [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+)
+(./src/Miscelleneous/LiChaoTree.cpp [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23])
+)
+(./src/Miscelleneous/PersistenceSegTree.cpp [20])
+(./src/Miscelleneous/XOR_FFT.cpp) (./src/Miscelleneous/NTT.cpp [21])
+(./src/Miscelleneous/2D_FFT.cpp
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 (./src/Miscelleneous/DivideandConquerOptimization.cpp)
-(./src/Miscelleneous/OrderStatisticTree.cpp) (./src/Miscelleneous/BITSET.cpp
-[24]
+(./src/Miscelleneous/OrderStatisticTree.cpp [23])
+(./src/Miscelleneous/BITSET.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [25]
-[26
+ [24])
+[25
+
+] [26
 
 
 ] [27
@@ -1015,9 +1020,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16498 strings out of 493005
- 301533 string characters out of 6134596
- 920256 words of memory out of 5000000
+ 16495 strings out of 493005
+ 301466 string characters out of 6134596
+ 659256 words of memory out of 5000000
  20180 multiletter control sequences out of 15000+600000
  5523 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
