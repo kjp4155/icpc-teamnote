@@ -1,26 +1,3 @@
-#include <cstdio>
-#include <algorithm>
-#include <cstdlib>
-#include <cmath>
-#include <climits>
-#include <cstring>
-#include <string>
-#include <vector>
-#include <queue>
-#include <numeric>
-#include <functional>
-#include <set>
-#include <map>
-#include <unordered_map>
-#include <unordered_set>
-#include <memory>
-#include <thread>
-#include <tuple>
-#include <limits>
-
-using namespace std;
-
-
 /*
 Tests
 http://www.spoj.com/problems/GREED/
