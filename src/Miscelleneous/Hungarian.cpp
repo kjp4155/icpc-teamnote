@@ -1,120 +1,159 @@
-// Min cost bipartite matching via shortest augmenting paths
-//
-// This is an O(n^3) implementation of a shortest augmenting path
-// algorithm for finding min cost perfect matchings in dense
-// graphs.  In practice, it solves 1000x1000 problems in around 1
-// second.
-//
-//   cost[i][j] = cost for pairing left node i with right node j
-//   Lmate[i] = index of right node that left node i pairs with
-//   Rmate[j] = index of left node that right node j pairs with
-//
-// The values in cost[i][j] may be positive or negative.  To perform
-// maximization, simply negate the cost[][] matrix.
+/*
+Tests
+http://www.spoj.com/problems/GREED/
+https://www.acmicpc.net/problem/8992
+SRM 506 mid
 
-typedef vector<double> VD;
-typedef vector<VD> VVD;
-typedef vector<int> VI;
+Time complexity O(n^3)
 
-double MinCostMatching(const VVD &cost, VI &Lmate, VI &Rmate) {
-  int n = int(cost.size());
+Usage
+MinWeightBipartiteMatch matcher(n);
+for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) matcher.weights[i][j] = SOMETHING;
+cost_t total = matcher.solve();
 
-  // construct dual feasible solution
-  VD u(n);
-  VD v(n);
-  for (int i = 0; i < n; i++) {
-    u[i] = cost[i][0];
-    for (int j = 1; j < n; j++) u[i] = min(u[i], cost[i][j]);
+See matcher.match(row -> col) and matcher.matched(col -> row) for actual match
+*/
+
+struct MinWeightBipartiteMatch
+{
+  typedef long long cost_t;
+
+  cost_t max_cost() const { return numeric_limits<cost_t>::max(); }
+
+  // input
+  int n;
+  vector<vector<cost_t>> weights;
+  // output
+  vector<int> match, matched;
+
+  MinWeightBipartiteMatch(int n) :
+    n(n), match(n), matched(n), weights(n, vector<cost_t>(n))
+  {
+
   }
-  for (int j = 0; j < n; j++) {
-    v[j] = cost[0][j] - u[0];
-    for (int i = 1; i < n; i++) v[j] = min(v[j], cost[i][j] - u[i]);
-  }
-  
-  // construct primal solution satisfying complementary slackness
-  Lmate = VI(n, -1);
-  Rmate = VI(n, -1);
-  int mated = 0;
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-      if (Rmate[j] != -1) continue;
-      if (fabs(cost[i][j] - u[i] - v[j]) < 1e-10) {
-        Lmate[i] = j;
-        Rmate[j] = i;
-        mated++;
-        break;
-      }
+
+  void resize(int n) {
+    this->n = n;
+    match.resize(n);
+    matched.resize(n);
+    weights.resize(n);
+    for (int i = 0; i < n; i++) {
+      weights[i].resize(n);
     }
   }
-  
-  VD dist(n);
-  VI dad(n);
-  VI seen(n);
-  
-  // repeat until primal solution is feasible
-  while (mated < n) {
-    
-    // find an unmatched left node
-    int s = 0;
-    while (Lmate[s] != -1) s++;
-    
-    // initialize Dijkstra
-    fill(dad.begin(), dad.end(), -1);
-    fill(seen.begin(), seen.end(), 0);
-    for (int k = 0; k < n; k++) 
-      dist[k] = cost[s][k] - u[s] - v[k];
-    
-    int j = 0;
-    while (true) {
-      
-      // find closest
-      j = -1;
-      for (int k = 0; k < n; k++) {
-        if (seen[k]) continue;
-        if (j == -1 || dist[k] < dist[j]) j = k;
+
+  /* for solve() */
+  vector<cost_t> slack;
+  vector<cost_t> potential_row, potential_col;
+  vector<int> reach_row, reach_col;
+  int rcnt;
+  vector<int> from;
+  void found_match(int r, int c) {
+    do {
+      int old_match = match[r];
+      match[r] = c;
+      matched[c] = r;
+      tie(r, c) = make_pair(from[r], old_match);
+    } while (r >= 0 && c >= 0);
+  }
+
+  void augment(int row_to_match) {
+    slack.resize(n);
+    for (int c = 0; c < n; c++) {
+      slack[c] = weights[row_to_match][c] - potential_row[row_to_match] - potential_col[c];
+    }
+    ++rcnt;
+    vector<int> q; q.reserve(n);
+    int h = 0;
+    q.push_back(row_to_match);
+    reach_row[row_to_match] = rcnt;
+    from[row_to_match] = -1;
+    for (;;) {
+      while (h < q.size()) {
+        int r = q[h++];
+        for (int c = 0; c < n; c++) {
+          cost_t gap = weights[r][c] - potential_row[r] - potential_col[c];
+          slack[c] = min(slack[c], gap);
+          if (gap != cost_t()) continue;
+          int next = matched[c];
+          if (next < 0) {
+            found_match(r, c);
+            return;
+          }
+          reach_col[c] = rcnt;
+          if (reach_row[next] == rcnt) continue;
+          q.push_back(next);
+          reach_row[next] = rcnt;
+          from[next] = r;
+        }
       }
-      seen[j] = 1;
-      
-      // termination condition
-      if (Rmate[j] == -1) break;
-      
-      // relax neighbors
-      const int i = Rmate[j];
-      for (int k = 0; k < n; k++) {
-        if (seen[k]) continue;
-        const double new_dist = dist[j] + cost[i][k] - u[i] - v[k];
-        if (dist[k] > new_dist) {
-          dist[k] = new_dist;
-          dad[k] = j;
+      cost_t delta = max_cost();
+      for (int c = 0; c < n; c++) {
+        if (reach_col[c] == rcnt) continue; // non-covered -> continue
+        delta = min(delta, slack[c]);
+      }
+      for (int r = 0; r < n; r++) {
+        if (reach_row[r] == rcnt) continue;
+        potential_row[r] -= delta;
+      }
+      for (int c = 0; c < n; c++) {
+        if (reach_col[c] == rcnt) continue;
+        potential_col[c] += delta;
+        slack[c] -= delta;
+      }
+      int lastsize = q.size();
+      for (int c = 0; c < n; c++) {
+        if (reach_col[c] == rcnt) continue;
+        if (slack[c] != cost_t()) continue;
+        int next = matched[c];
+        if (next >= 0 && reach_row[next] == rcnt) continue;
+        for (int qi = 0; qi < lastsize; qi++) {
+          int r = q[qi];
+          cost_t gap = weights[r][c] - potential_row[r] - potential_col[c];
+          if (gap != cost_t()) continue;
+          if (next < 0) {
+            found_match(r, c);
+            return;
+          }
+          reach_col[c] = rcnt;
+          q.push_back(next);
+          reach_row[next] = rcnt;
+          from[next] = r;
+          break;
         }
       }
     }
-    
-    // update dual variables
-    for (int k = 0; k < n; k++) {
-      if (k == j || !seen[k]) continue;
-      const int i = Rmate[k];
-      v[k] += dist[k] - dist[j];
-      u[i] -= dist[k] - dist[j];
-    }
-    u[s] += dist[j];
-    
-    // augment along path
-    while (dad[j] >= 0) {
-      const int d = dad[j];
-      Rmate[j] = Rmate[d];
-      Lmate[Rmate[j]] = j;
-      j = d;
-    }
-    Rmate[j] = s;
-    Lmate[s] = j;
-    
-    mated++;
   }
-  
-  double value = 0;
-  for (int i = 0; i < n; i++)
-    value += cost[i][Lmate[i]];
-  
-  return value;
-}
+
+  void initialize() {
+    potential_row.assign(n, cost_t());
+    potential_col.assign(n, cost_t());
+    match.assign(n, -1);
+    matched.assign(n, -1);
+    reach_row.assign(n, 0);
+    reach_col.assign(n, 0);
+    from.resize(n);
+    rcnt = 1;
+    for (int i = 0; i < n; i++) {
+      cost_t row_min_weight = *min_element(weights[i].begin(), weights[i].end());
+      potential_row[i] = row_min_weight;
+    }
+    for (int i = 0; i < n; i++) {
+      cost_t col_min_weight = weights[0][i] - potential_row[0];
+      for (int j = 1; j < n; j++) col_min_weight = min(col_min_weight, weights[j][i] - potential_row[j]);
+      potential_col[i] = col_min_weight;
+    }
+  }
+
+  cost_t solve() {
+    initialize();
+    for (int row_to_match = 0; row_to_match < n; row_to_match++) {
+      augment(row_to_match);
+    }
+    cost_t ans = cost_t();
+    for (auto v : potential_row) ans += v;
+    for (auto v : potential_col) ans += v;
+    return ans;
+  }
+};
+

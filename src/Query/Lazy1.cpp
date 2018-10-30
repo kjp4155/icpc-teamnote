@@ -1,5 +1,3 @@
-int N,M,K;
-
 struct segTree{
     struct Node{
         ll d, lazy;
@@ -47,28 +45,3 @@ struct segTree{
     }
 
 };
-
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    segTree tree;
-    cin >> N >> M >> K;
-    tree.init(N);
-    repp(i,N){
-        ll x; cin >> x;
-        tree.update(i,i,x,1,1,tree.n);
-    }
-    repp(i,M+K){
-        int a; cin >> a;
-        if( a == 1 ){
-            int b,c; ll d;
-            cin >> b >> c >> d;
-            tree.update(b,c,d,1,1,tree.n);
-        }
-        else{
-            int b,c; cin >> b >> c;
-            printf("%lld\n",tree.query(b,c,1,1,tree.n));
-        }
-    }
-
-}

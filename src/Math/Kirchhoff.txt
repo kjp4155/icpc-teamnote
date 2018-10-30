@@ -1,0 +1,4 @@
+Find number of MST in given graph G.
+m[i][j] := -( number of i<->j edges ) (i != j)
+m[i][i] := degree of vertex i
+(ans) = (det of (n-1)x(n-1) matrix obtained from m with first row&col deleted )
