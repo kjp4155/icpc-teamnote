@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  30 OCT 2018 13:43
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  31 OCT 2018 17:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -935,71 +935,68 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2])
-(./src/String/SuffixArray.cpp) (./src/String/Manacher.cpp [3])
-(./src/String/ZAlgorithm.cpp) (./src/Graph/BCC.cpp) (./src/Graph/MaxClique.cpp
-[4]) (./src/Graph/HopcroftKarp.cpp) (./src/Graph/Dinic.cpp [5])
-(./src/Graph/MCMF.cpp
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6])
-(./src/Graph/Stoer_Wagner.cpp) (./src/Graph/Arborescence.cpp [7])
-(./src/Graph/DominatorTree.cpp) (./src/Graph/Vizing.cpp [8])
-(./src/Graph/LRflow.txt) (./src/Query/splay.cpp [9]
+(./src/String/SuffixArray.cpp) (./src/String/Manacher.cpp)
+(./src/String/ZAlgorithm.cpp [3]) (./src/String/EERTREE.cpp)
+(./src/Graph/BCC.cpp [4]) (./src/Graph/MaxClique.cpp)
+(./src/Graph/HopcroftKarp.cpp [5]) (./src/Graph/Dinic.cpp)
+(./src/Graph/MCMF.cpp [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Query/LinkCut.cpp [10]
+(./src/Graph/Blossom.cpp [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
+(./src/Graph/Stoer_Wagner.cpp [8]) (./src/Graph/Arborescence.cpp)
+(./src/Graph/DominatorTree.cpp [9]) (./src/Graph/Vizing.cpp)
+(./src/Graph/LRflow.txt [10]) (./src/Query/splay.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-(./src/Query/MoHilbertOrder.cpp) (./src/Query/ParallelBinarySearch.cpp
+ [11])
+(./src/Query/LinkCut.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12])
-(./src/Query/Lazy1.cpp) (./src/Math/fft.cpp [13]) (./src/Math/Kirchhoff.txt)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./src/Query/MoHilbertOrder.cpp) (./src/Query/Lazy1.cpp [13])
+(./src/Geometry/smallest_enclosing_circle.cpp) (./src/Math/fft.cpp [14])
+(./src/Math/Kirchhoff.txt) (./src/Math/Berlekamp_Massey.cpp
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15])
 (./src/Math/simplex.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14])
-(./src/Math/GaussianElimination.cpp) (./src/Math/PrimeAlgorithms.cpp [15])
-(./src/Miscelleneous/Hungarian.cpp
+ [16])
+(./src/Math/GaussianElimination.cpp) (./src/Math/PrimeAlgorithms.cpp [17])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(./src/Miscelleneous/LiChaoTree.cpp [17]
+(./src/Miscelleneous/Hungarian.cpp [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/PersistenceSegTree.cpp [18])
 Underfull \vbox (badness 2573) has occurred while \output is active []
 
-
-(./src/Miscelleneous/XOR_FFT.cpp) (./src/Miscelleneous/NTT.cpp [19])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./src/Miscelleneous/2D_FFT.cpp [20]
+ [19]
+(./src/Miscelleneous/LiChaoTree.cpp)
+(./src/Miscelleneous/PersistenceSegTree.cpp [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./src/Miscelleneous/OrderStatisticTree.cpp [21])
+(./src/Miscelleneous/XOR_FFT.cpp [21]) (./src/Miscelleneous/NTT.cpp)
+(./src/Miscelleneous/2D_FFT.cpp [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(./src/Miscelleneous/OrderStatisticTree.cpp [23])
 (./src/Miscelleneous/BITSET.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22])
-[23
-
-] [24
-
-
-] [25
-
+ [24])
+(./src/Miscelleneous/Highly_composite_numbers.txt) [25
 
 ] [26
 
@@ -1010,14 +1007,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [28
 
 
+] [29
+
+
+]
+[30
+
+
 ] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
- 16488 strings out of 493005
- 301143 string characters out of 6134596
- 732637 words of memory out of 5000000
+ 16501 strings out of 493005
+ 301475 string characters out of 6134596
+ 699637 words of memory out of 5000000
  20181 multiletter control sequences out of 15000+600000
  5531 words of font info for 46 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,12n,77p,10426b,2384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on teamnote.pdf (28 pages).
+Output written on teamnote.pdf (30 pages).

@@ -1,60 +1,37 @@
-// Stoer-Wagner algorithm
-struct mincut {
-    int n;
-    vector<vector<int>> graph;
-
-    void init(int nn) {
-        n = nn;
-        graph.resize(n, vector<int>(n, 0));
+namespace stoer_wagner{
+    const int MX = 505;
+    int G[MX][MX], vst[MX], n;
+    
+    void init(int nn){ n = nn; memset(G, 0, sizeof G); }
+    void add_edge(int a, int b, int d){ if(a != b) G[a][b] = G[b][a] = d; }
+    
+    pii minimum_cut_phase(int st, int &res){
+        int dist[MX] = {}, vis[MX];
+        int cur = 1e9, s = st, e = -1;
+        memcpy(vis, vst, sizeof vst);
+        dist[st] = 1e9;
+        while(1){
+            int mx = 0;
+            for(int i=1;i<=n;i++) if(!vis[i] && (!mx || dist[mx] < dist[i])) mx = i;
+            if(mx == 0) break;
+            cur = dist[mx]; e = s; s = mx; vis[mx] = 1;
+            for(int i = 1; i <= n; i++) dist[i] += G[mx][i];
+        }
+        res = min(res, cur);
+        return pii(s, e);
     }
-
-    void addEdge(int u, int v, int w) {
-        graph[u][v] += w;
-        graph[v][u] += w;
-    }
-
-    pair<int, vector<int>> findMincut() {
-        vector<vector<int>> weight = graph;
-        vector<bool> used(n, 0);
-        vector<int> best_cut;
-        int best_weight = -1;
-
-        vector<vector<int>> group(n);
-        for(int i = 0; i < n; i++) 
-            group[i].push_back(i);
-
-
-        for(int phase = n-1; phase >= 0; phase--) {
-            int start = 0;
-            vector<int> w = weight[start];
-            vector<bool> inSet = used;
-            inSet[start] = true;
-            int prev, last = start;
-
-            for(int i = 0; i < phase; i++) {
-                prev = last;
-                last = -1;
-                for(int j = 0; j < n; j++)
-                    if(!inSet[j] && (last == -1 || w[j] > w[last])) last = j;
-
-                if(i < phase-1) {
-                    inSet[last] = true;
-                    for(int j = 0; j < n; j++)
-                        w[j] += weight[last][j];
-                } else {  // last step - merge two nodes: prev & last
-                    for(int j = 0; j < n; j++) {
-                        weight[prev][j] += weight[last][j];
-                        weight[j][prev] = weight[prev][j];
-                    }
-                    used[last] = true;
-                    group[prev].insert(group[prev].end(), group[last].begin(), group[last].end());
-                    if(best_weight == -1 || w[last] < best_weight) {
-                        best_weight = w[last];
-                        best_cut = group[last];
-                    }
-                }
+    int run(){
+        if(n <= 1) return 0;
+        memset(vst, 0, sizeof vst);
+        int res = 1e9, t = 1, u;
+        for(int i = 0; i < n-1; i++){
+            tie(t, u) = minimum_cut_phase(t, res);
+            vst[u] = 1;
+            for(int i = 1; i <= n; i++){
+                if(vst[i] || t == i) continue;
+                G[t][i] += G[u][i]; G[i][t] += G[u][i];
             }
         }
-        return make_pair(best_weight, best_cut);
+        return res;
     }
 };
