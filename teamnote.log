@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  31 OCT 2018 17:11
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.11.9)  9 NOV 2018 16:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -998,22 +998,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [24])
 (./src/Miscelleneous/Highly_composite_numbers.txt) [25
 
-] [26
-
-
-] [27
-
-
-] [28
-
-
-] [29
-
-
-]
-[30
-
-
 ] (./teamnote.aux) ) 
 Here is how much of TeX's memory you used:
  16501 strings out of 493005
@@ -1024,4 +1008,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  55i,12n,77p,10426b,2384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on teamnote.pdf (30 pages).
+Output written on teamnote.pdf (25 pages).
