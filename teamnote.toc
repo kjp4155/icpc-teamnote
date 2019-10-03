@@ -1,47 +1,48 @@
-\contentsline {section}{\numberline {1}Setting}{1}
-\contentsline {subsection}{\numberline {1.1}Header}{1}
-\contentsline {subsection}{\numberline {1.2}vimrc}{1}
-\contentsline {subsection}{\numberline {1.3}Sublime text}{1}
-\contentsline {section}{\numberline {2}String}{2}
-\contentsline {subsection}{\numberline {2.1}KMP}{2}
-\contentsline {subsection}{\numberline {2.2}Aho Chorasick}{2}
-\contentsline {subsection}{\numberline {2.3}Suffix array}{3}
-\contentsline {subsection}{\numberline {2.4}Manacher's algorithm}{3}
-\contentsline {subsection}{\numberline {2.5}Z algorithm}{3}
-\contentsline {subsection}{\numberline {2.6}EERTREE}{4}
-\contentsline {section}{\numberline {3}Graph \& Flow}{4}
-\contentsline {subsection}{\numberline {3.1}BCC}{4}
-\contentsline {subsection}{\numberline {3.2}Maximum Clique}{5}
-\contentsline {subsection}{\numberline {3.3}Hopcroft Karp}{5}
-\contentsline {subsection}{\numberline {3.4}Dinic}{6}
-\contentsline {subsection}{\numberline {3.5}MCMF}{6}
-\contentsline {subsection}{\numberline {3.6}Blossom}{7}
-\contentsline {subsection}{\numberline {3.7}Stoer Wagner}{8}
-\contentsline {subsection}{\numberline {3.8}Arborescence}{9}
-\contentsline {subsection}{\numberline {3.9}Dominator Tree}{9}
-\contentsline {subsection}{\numberline {3.10}Vizing's Algorithm}{10}
-\contentsline {subsection}{\numberline {3.11}LR-flow}{10}
-\contentsline {section}{\numberline {4}Query}{11}
-\contentsline {subsection}{\numberline {4.1}Splay Tree}{11}
-\contentsline {subsection}{\numberline {4.2}Link Cut Tree}{12}
-\contentsline {subsection}{\numberline {4.3}Mo Hilbert Order}{13}
-\contentsline {subsection}{\numberline {4.4}Lazy Propagation 1}{13}
-\contentsline {section}{\numberline {5}Geometry}{14}
-\contentsline {subsection}{\numberline {5.1}Smallest Enclosing Circle}{14}
-\contentsline {section}{\numberline {6}Math}{14}
-\contentsline {subsection}{\numberline {6.1}FFT}{14}
-\contentsline {subsection}{\numberline {6.2}Kirchhoff Theorem}{15}
-\contentsline {subsection}{\numberline {6.3}Berlekamp Massey}{15}
-\contentsline {subsection}{\numberline {6.4}Simplex}{16}
-\contentsline {subsection}{\numberline {6.5}Gaussian Elimination}{17}
-\contentsline {subsection}{\numberline {6.6}Prime Algorithms}{17}
-\contentsline {section}{\numberline {7}Miscelleneous}{18}
-\contentsline {subsection}{\numberline {7.1}Hungarian}{18}
-\contentsline {subsection}{\numberline {7.2}LiChao Tree}{20}
-\contentsline {subsection}{\numberline {7.3}Persistence Segment Tree}{20}
-\contentsline {subsection}{\numberline {7.4}XOR FFT}{21}
-\contentsline {subsection}{\numberline {7.5}NTT}{22}
-\contentsline {subsection}{\numberline {7.6}2D FFT}{22}
-\contentsline {subsection}{\numberline {7.7}Order Statistic Tree}{23}
-\contentsline {subsection}{\numberline {7.8}BITSET}{24}
-\contentsline {subsection}{\numberline {7.9}Highly Composite Numbers}{25}
+\contentsline {section}{\numberline {1}Setting}{1}% 
+\contentsline {subsection}{\numberline {1.1}Header}{1}% 
+\contentsline {subsection}{\numberline {1.2}vimrc}{1}% 
+\contentsline {subsection}{\numberline {1.3}Sublime text}{1}% 
+\contentsline {section}{\numberline {2}String}{2}% 
+\contentsline {subsection}{\numberline {2.1}KMP}{2}% 
+\contentsline {subsection}{\numberline {2.2}Aho Chorasick}{2}% 
+\contentsline {subsection}{\numberline {2.3}Suffix array}{3}% 
+\contentsline {subsection}{\numberline {2.4}Manacher's algorithm}{3}% 
+\contentsline {subsection}{\numberline {2.5}Z algorithm}{3}% 
+\contentsline {subsection}{\numberline {2.6}EERTREE}{4}% 
+\contentsline {section}{\numberline {3}Graph \& Flow}{4}% 
+\contentsline {subsection}{\numberline {3.1}BCC}{4}% 
+\contentsline {subsection}{\numberline {3.2}Maximum Clique}{5}% 
+\contentsline {subsection}{\numberline {3.3}Hopcroft Karp}{5}% 
+\contentsline {subsection}{\numberline {3.4}Dinic}{6}% 
+\contentsline {subsection}{\numberline {3.5}MCMF}{6}% 
+\contentsline {subsection}{\numberline {3.6}Blossom}{7}% 
+\contentsline {subsection}{\numberline {3.7}Stoer Wagner}{8}% 
+\contentsline {subsection}{\numberline {3.8}Arborescence}{9}% 
+\contentsline {subsection}{\numberline {3.9}Dominator Tree}{9}% 
+\contentsline {subsection}{\numberline {3.10}Vizing's Algorithm}{10}% 
+\contentsline {subsection}{\numberline {3.11}LR-flow}{10}% 
+\contentsline {section}{\numberline {4}Query}{10}% 
+\contentsline {subsection}{\numberline {4.1}Splay Tree}{10}% 
+\contentsline {subsection}{\numberline {4.2}Splay Tree2}{12}% 
+\contentsline {subsection}{\numberline {4.3}Link Cut Tree}{12}% 
+\contentsline {subsection}{\numberline {4.4}Mo Hilbert Order}{13}% 
+\contentsline {subsection}{\numberline {4.5}Lazy Propagation 1}{13}% 
+\contentsline {section}{\numberline {5}Geometry}{14}% 
+\contentsline {subsection}{\numberline {5.1}Smallest Enclosing Circle}{14}% 
+\contentsline {section}{\numberline {6}Math}{15}% 
+\contentsline {subsection}{\numberline {6.1}FFT}{15}% 
+\contentsline {subsection}{\numberline {6.2}Kirchhoff Theorem}{15}% 
+\contentsline {subsection}{\numberline {6.3}Berlekamp Massey}{15}% 
+\contentsline {subsection}{\numberline {6.4}Simplex}{16}% 
+\contentsline {subsection}{\numberline {6.5}Gaussian Elimination}{17}% 
+\contentsline {subsection}{\numberline {6.6}Prime Algorithms}{17}% 
+\contentsline {section}{\numberline {7}Miscelleneous}{18}% 
+\contentsline {subsection}{\numberline {7.1}Hungarian}{18}% 
+\contentsline {subsection}{\numberline {7.2}LiChao Tree}{20}% 
+\contentsline {subsection}{\numberline {7.3}Persistence Segment Tree}{20}% 
+\contentsline {subsection}{\numberline {7.4}XOR FFT}{21}% 
+\contentsline {subsection}{\numberline {7.5}NTT}{22}% 
+\contentsline {subsection}{\numberline {7.6}2D FFT}{22}% 
+\contentsline {subsection}{\numberline {7.7}Order Statistic Tree}{23}% 
+\contentsline {subsection}{\numberline {7.8}BITSET}{24}% 
+\contentsline {subsection}{\numberline {7.9}Highly Composite Numbers}{25}% 
