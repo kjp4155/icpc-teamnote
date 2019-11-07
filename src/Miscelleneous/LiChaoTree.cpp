@@ -1,100 +1,131 @@
-// LiChaoTree for dynamic CHT trick
-// This example maintains CHT for finding MAXIMUM of corresponding x
-// op=1 : add ax + b into CHT
-// op=2 : find max value of position x
-// https://cp-algorithms.com/geometry/convex_hull_trick.html
-ll f(Pll line, ll x){
-    return line.Fi*x + line.Se;
-}
 
-vector<ll> xlist;
+/* This is MAX Lichao Tree*/
 struct LiChaoTree{
-    int n; vector<Pll> d;
-    void init(int x){
-        n = 1; while (n < x) n *= 2;
-        d.resize(n*2+10);
-        for(auto& e : d){
-            e = {0, -3*(1e18)};
-        }
+    ll f(Line l, ll x){
+        return l.first * x + l.second;
+    }
+    struct Node{
+        int lnode, rnode;
+        ll xl, xr;
+        Line l;
+    };
+    vector<Node> nodes;
+    void init(ll xmin, ll xmax){
+        nodes.push_back({-1,-1,xmin,xmax,{0,-1e18}});
     }
 
-    void insert(int node, int nL, int nR, Pll newline){
-        if( nL == nR ){    
-            if( f(d[node], xlist[nL]) < f(newline, xlist[nL]) ) d[node] = newline;
+    void insert(int n, Line newline){
+        ll xl = nodes[n].xl, xr = nodes[n].xr;
+        ll xm = (xl + xr) >> 1;
+        
+        Line llow = nodes[n].l, lhigh = newline;
+        if( f(llow, xl) >= f(lhigh,xl) ) swap(llow, lhigh);
+
+        if( f(llow, xr) <= f(lhigh, xr) ){
+            nodes[n].l = lhigh;
             return;
         }
-        bool left = f(d[node], xlist[nL]) < f(newline, xlist[nL]);
-        bool right = f(d[node], xlist[nR]) < f(newline, xlist[nR]);
 
-        // take upper, lower line based on leftmost point of the segment
-        Pll upper = d[node], lower = newline;
-        if( left ) swap(upper, lower);
-
-        // one line totally cover another line
-        if( left == right ){
-            d[node] = upper; return;
+        else if( f(llow, xm) <= f(lhigh, xm) ){
+            nodes[n].l = lhigh;
+            if( nodes[n].rnode == -1 ){
+                nodes[n].rnode = nodes.size();
+                nodes.push_back({-1,-1,xm+1,xr,{0,-1e18}});
+            }
+            insert(nodes[n].rnode, llow);
         }
 
-        int m = (nL+nR)/2;
-        // intersection in left half segment
-        if( f(upper, xlist[m]) <= f(lower, xlist[m]) ){
-            d[node] = lower;
-            insert(node*2,nL,m, upper);
-        }
-        // intersection in right half segment
         else{
-            d[node] = upper;
-            insert(node*2+1,m+1,nR,lower);
+            nodes[n].l = llow;
+            if( nodes[n].lnode == -1 ){
+                nodes[n].lnode = nodes.size();
+                nodes.push_back({-1,-1,xl,xm,{0,-1e18}});
+            }
+            insert(nodes[n].lnode, lhigh);
         }
     }
+    ll get(int n, ll xq){
+        if( n == -1 ) return -1e18;
+        ll xl = nodes[n].xl, xr = nodes[n].xr;
+        ll xm = (xl + xr) >> 1;
 
-    ll query(int node, int nL, int nR, int pos){
-        if( nL == nR ) return f(d[node], xlist[pos]);
-        
-        int m = (nL+nR)/2;
-        ll nval = -3*(1e18);
-        if( pos <= m ) nval = query(node*2, nL, m, pos);
-        else nval = query(node*2+1, m+1, nR, pos);
-
-        return max(nval, f(d[node], xlist[pos]) );
+        if( xq <= xm ) return max(f(nodes[n].l, xq), get(nodes[n].lnode, xq));
+        else return max(f(nodes[n].l, xq), get(nodes[n].rnode, xq));
     }
-
 };
 
-int main(){
-    int Q; scanf("%d",&Q);
-    vector<pair<int,Pll>> qlist;
-    repp(q,Q){
-        int op; scanf("%d",&op);
-        if( op == 1 ){
-            ll a,b; scanf("%lld%lld",&a,&b);
-            qlist.push_back({1,{a,b}});
-        }
-        else{
-            ll x; scanf("%lld",&x);
-            xlist.push_back(x);
-            qlist.push_back({2,{x,x}});
-        }
-    }
-
-    xlist.push_back(-2*(1e12) - 10);
-    sort(all(xlist));
-    xlist.erase(unique(all(xlist)), xlist.end());
+int main() {
     LiChaoTree tree;
-    tree.init( sz(xlist)+1 );
+    tree.init(-2e12, 2e12);
 
-    // careful to put padding into xlist
-    // so that it fits to tree size
-    while( sz(xlist) < tree.n+5 )  xlist.push_back(2*(1e12));
-
-    for(auto q : qlist){
-        if( q.Fi == 1 ){
-            tree.insert(1,1,tree.n,q.Se);
+    int Q; scanf("%d",&Q);
+    for(int q=0;q<Q;q++){
+        ll op, a, b;
+        scanf("%lld",&op);
+        if( op == 1 ){
+            scanf("%lld%lld",&a,&b);
+            tree.insert(0, {a,b});
         }
-        if( q.Fi == 2 ){
-            int pos = lower_bound(all(xlist), q.Se.Fi) - xlist.begin();
-            printf("%lld\n",tree.query(1,1,tree.n,pos));
+        if( op == 2 ){
+            scanf("%lld",&a);
+            printf("%lld\n",tree.get(0, a));
         }
     }
 
 }
+
+// This is MIN Lichao tree //
+struct LiChaoTree{
+    ll f(Line l, ll x){
+        return l.first * x + l.second;
+    }
+    struct Node{
+        int lnode, rnode;
+        ll xl, xr;
+        Line l;
+    };
+    vector<Node> nodes;
+    void init(ll xmin, ll xmax){
+        nodes.push_back({-1,-1,xmin,xmax,{0,1e18}});
+    }
+
+    void insert(int n, Line newline){
+        ll xl = nodes[n].xl, xr = nodes[n].xr;
+        ll xm = (xl + xr) >> 1;
+        
+        Line llow = nodes[n].l, lhigh = newline;
+        if( f(llow, xl) >= f(lhigh,xl) ) swap(llow, lhigh);
+
+        if( f(llow, xr) <= f(lhigh, xr) ){
+            nodes[n].l = llow;
+            return;
+        }
+
+        else if( f(llow, xm) <= f(lhigh, xm) ){
+            nodes[n].l = llow;
+            if( nodes[n].rnode == -1 ){
+                nodes[n].rnode = nodes.size();
+                nodes.push_back({-1,-1,xm+1,xr,{0,1e18}});
+            }
+            insert(nodes[n].rnode, lhigh);
+        }
+
+        else{
+            nodes[n].l = lhigh;
+            if( nodes[n].lnode == -1 ){
+                nodes[n].lnode = nodes.size();
+                nodes.push_back({-1,-1,xl,xm,{0,1e18}});
+            }
+            insert(nodes[n].lnode, llow);
+        }
+    }
+    ll get(int n, ll xq){
+        if( n == -1 ) return 1e18;
+        ll xl = nodes[n].xl, xr = nodes[n].xr;
+        ll xm = (xl + xr) >> 1;
+
+        if( xq <= xm ) return min(f(nodes[n].l, xq), get(nodes[n].lnode, xq));
+        else return min(f(nodes[n].l, xq), get(nodes[n].rnode, xq));
+    }
+};
+

@@ -1,58 +1,114 @@
-#include <cstdio>
- 
-const int A = 7, B = 26, P = A << B | 1, R = 3;
-const int SZ = 20, N = 1 << SZ;
- 
-int Pow(int x, int y) {
-    int r = 1;
-    while (y) {
-        if (y & 1) r = (long long)r * x % P;
-        x = (long long)x * x % P;
-        y >>= 1;
+
+template< int mod, int primitiveroot >
+struct NumberTheoreticTransform {
+  vector< vector< int > > rts, rrts;
+
+  void ensure_base(int N) {
+    if(rts.size() >= N) return;
+    rts.resize(N), rrts.resize(N);
+    for(int i = 1; i < N; i <<= 1) {
+      if(rts[i].size()) continue;
+      int w = mod_pow(primitiveroot, (mod - 1) / (i * 2));
+      int rw = inverse(w);
+      rts[i].resize(i), rrts[i].resize(i);
+      rts[i][0] = 1, rrts[i][0] = 1;
+      for(int k = 1; k < i; k++) {
+        rts[i][k] = mul(rts[i][k - 1], w);
+        rrts[i][k] = mul(rrts[i][k - 1], rw);
+      }
     }
-    return r;
-}
- 
-void FFT(int *a, bool f) {
-    int i, j, k, x, y, z;
-    j = 0;
-    for (i = 1; i < N; i++) {
-        for (k = N >> 1; j >= k; k >>= 1) j -= k;
-        j += k;
-        if (i < j) {
-            k = a[i];
-            a[i] = a[j];
-            a[j] = k;
+  }
+
+  inline int mod_pow(int x, int n) {
+    int ret = 1;
+    while(n > 0) {
+      if(n & 1) ret = mul(ret, x);
+      x = mul(x, x);
+      n >>= 1;
+    }
+    return ret;
+  }
+
+  inline int inverse(int x) {
+    return mod_pow(x, mod - 2);
+  }
+
+  inline int add(int x, int y) {
+    x += y;
+    if(x >= mod) x -= mod;
+    return x;
+  }
+
+  inline int mul(int a, int b) {
+    return int(1LL * a * b % mod);
+  }
+
+  void DiscreteFourierTransform(vector< int > &F, bool rev) {
+    const int N = (int) F.size();
+    ensure_base(N);
+    for(int i = 0, j = 1; j + 1 < N; j++) {
+      for(int k = N >> 1; k > (i ^= k); k >>= 1);
+      if(i > j) swap(F[i], F[j]);
+    }
+    for(int i = 1; i < N; i <<= 1) {
+      for(int j = 0; j < N; j += i * 2) {
+        for(int k = 0; k < i; k++) {
+          int s = F[j + k], t = mul(F[j + k + i], rev ? rrts[i][k] : rts[i][k]);
+          F[j + k] = add(s, t), F[j + k + i] = add(s, mod - t);
         }
+      }
     }
-    for (i = 1; i < N; i <<= 1) {
-        x = Pow(f ? Pow(R, P - 2) : R, P / i >> 1);
-        for (j = 0; j < N; j += i << 1) {
-            y = 1;
-            for (k = 0; k < i; k++) {
-                z = (long long)a[i | j | k] * y % P;
-                a[i | j | k] = a[j | k] - z;
-                if (a[i | j | k] < 0) a[i | j | k] += P;
-                a[j | k] += z;
-                if (a[j | k] >= P) a[j | k] -= P;
-                y = (long long)y * x % P;
-            }
-        }
+    if(rev) {
+      int temp = inverse(N);
+      for(int i = 0; i < N; i++) F[i] = mul(F[i], temp);
     }
-    if (f) {
-        j = Pow(N, P - 2);
-        for (i = 0; i < N; i++) a[i] = (long long)a[i] * j % P;
-    }
-}
- 
-int X[N];
- 
+  }
+
+  vector< int > Multiply(const vector< int > &A, const vector< int > &B) {
+    int sz = 1;
+    while(sz < A.size() + B.size() - 1) sz <<= 1;
+    vector< int > F(sz), G(sz);
+    for(int i = 0; i < A.size(); i++) F[i] = A[i];
+    for(int i = 0; i < B.size(); i++) G[i] = B[i];
+    DiscreteFourierTransform(F, false);
+    DiscreteFourierTransform(G, false);
+    for(int i = 0; i < sz; i++) F[i] = mul(F[i], G[i]);
+    DiscreteFourierTransform(F, true);
+    F.resize(A.size() + B.size() - 1);
+    return F;
+  }
+};
+
+// https://codeforces.com/contest/1096/problem/G
+
+int N,K;
+vector<int> powv[500];
 int main() {
-    int i, n;
-    scanf("%d", &n);
-    for (i = 0; i <= n; i++) scanf("%d", &X[i]);
-    FFT(X, false);
-    for (i = 0; i < N; i++) X[i] = (long long)X[i] * X[i] % P;
-    FFT(X, true);
-    for (i = 0; i <= n + n; i++) printf("%d ", X[i]);
+    NumberTheoreticTransform<mod, 3> ntt;
+    scanf("%d%d",&N,&K);
+    vector<int> v;
+    rep(i,10) v.pb(0);
+    repp(i,K){
+        int x; scanf("%d",&x); v[x] = 1;
+    }
+    powv[0] = v;
+    for(int k=1;k<18;k++){
+        v = ntt.Multiply(v,v);
+        powv[k] = v;
+    }
+
+    vector<int> ansv;
+    rep(i,10) ansv.pb(0);
+    ansv[0] = 1;
+    for(int k=0;k<25;k++){
+        if( (N/2)&(1<<k) ) ansv = ntt.Multiply(ansv, powv[k]);
+    }
+    ll ans = 0;
+    for(auto e:  ansv){
+        ans = (ans + (ll)e*e)%mod;
+    }
+    cout << ans << endl;
+    //Debug(ansv);
+
+
 }

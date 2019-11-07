@@ -84,3 +84,43 @@ int main() {
     for (int i = 0; i < res.size(); ++i)
         printf("%lld\n", res[i]);
 }
+
+/////////////
+// Shanks-Tonelli, Square Root Modulo P
+/////////////
+long long get_sqrt(long long a, long long Mod) {
+    long long tp = Mod - 1, S = 0;
+    if (Mod == 2) return a;
+    if (Pow(a, (Mod - 1) / 2, Mod) != 1) {
+        puts("No square");
+        return -1;
+    }
+    while (tp % 2 == 0) {
+        S++;
+        tp /= 2;
+    }
+    long long Q = tp, z;
+    for (int i = 2;; i++) {
+        if (Pow(i, (Mod - 1) / 2, Mod) != 1) {
+            z = i;
+            break;
+        }
+    }
+    long long M = S, c = Pow(z, Q, Mod), t = Pow(a, Q, Mod), R = Pow(a, (Q + 1) / 2, Mod);
+    while (1) {
+        if (t == 0)return 0;
+        if (t == 1)return R;
+        long long tt = t, i = 0;
+        while (tt != 1) {
+            tt = tt * tt%Mod; i++;
+        }
+        long long b = c;
+        for (int j = 0; j < M - i - 1; j++) {
+            b = b * b%Mod;
+        }
+        M = i;
+        c = b * b%Mod;
+        t = t * b%Mod*b%Mod;
+        R = R * b%Mod;
+    }
+}
